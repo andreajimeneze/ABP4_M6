@@ -1,0 +1,45 @@
+/* Header */
+.navBar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    
+}
+
+
+/* FormAdd */
+form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 25px;
+    padding: 10% 0%;
+}
+
+/* Index - Lista menú */
+.listaMenu {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-bottom: 10px;
+    padding-left: 20%;
+    width: 100%;
+}
+
+.menuContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10%;
+    padding-bottom: 40%;
+}
+
+
+h1 {
+    text-align: center;
+    padding: 5% 0%;
+}

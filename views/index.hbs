@@ -1,0 +1,18 @@
+{{> head }}
+{{> header }}
+
+<h1>Menú</h1>
+<div class="menuContainer">
+
+{{#each menu}}
+    <div class="listaMenu">
+    <h4>{{ this.nombre }}</h4>
+    <p>...................</p>
+    <h5>{{ this.precio }}
+    </h5>
+</div>
+{{/each}}
+
+</div>
+
+{{> footer }}
