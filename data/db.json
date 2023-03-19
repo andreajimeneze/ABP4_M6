@@ -1,62 +1,18 @@
 [
     {
+        "nombre": "Fetuccini",
+        "precio": 4590
+    },
+    {
+        "nombre": "Pastel de choclo",
+        "precio": 4990
+    },
+    {
+        "nombre": "Caldo de cabeza",
+        "precio": 5
+    },
+    {
         "nombre": "cazuela",
         "precio": 5990
-    },
-    {
-        "nombre": "carbonada",
-        "precio": 4990
-    },
-    {
-        "nombre": "arroz",
-        "precio": 1000
-    },
-    {
-        "nombre": "charquicán",
-        "precio": 5990
-    },
-    {
-        "nombre": "arroz",
-        "precio": 1000
-    },
-    {
-        "nombre": "carbonada",
-        "precio": 4990
-    },
-    {
-        "nombre": "tomaticán",
-        "precio": 5990
-    },
-    {
-        "nombre": "locro",
-        "precio": 4000
-    },
-    {
-        "nombre": "fetuccini",
-        "precio": 5000
-    },
-    {
-        "nombre": "pastel de choclo",
-        "precio": 4000
-    },
-    {
-        "nombre": "Empanada de mariscos",
-        "precio": 2500
-    },
-    {
-        "nombre": "caldo de cabeza",
-        "precio": 3990
-    },
-    {
-        "nombre": "milanesa",
-        "precio": 3500
-    },
-    {
-        "nombre": "bife a lo pobre",
-        "precio": 9990
-    },
-    {
-        "nombre": "chupe de mariscos",
-        "precio": 12900
     }
 ]

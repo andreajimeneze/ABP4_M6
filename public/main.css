@@ -5,10 +5,40 @@
     justify-content: space-around;
 }
 
+body.pagMenu a {
+    font-size: 20px;
+    color: antiquewhite;
+    text-decoration: none;
+    padding-top: 4%;
+}
+
+body.pagMenu a:hover {
+    color: rgb(198, 169, 132);
+}
+
+body.pagMenu a:active {
+    color: aquamarine;
+}
+
+body.formulario a {
+    font-size: 20px;
+    color: rgb(40, 35, 35);
+    text-decoration: none;
+    padding-top: 4%;
+}
+
+body.formulario a:hover {
+    color: rgb(80, 80, 173);
+}
+
+body.formulario a:active {
+    color: rgb(47, 47, 153);
+}
+
 /* Footer */
 footer {
     text-align: center;
-    
+    padding-top: 5%;
 }
 
 
@@ -22,6 +52,18 @@ form {
 }
 
 /* Index - Lista menú */
+h1 {
+    font-size: 100px;
+    color: black;
+    text-align: center;
+    padding: 5% 0%;
+}
+
+.headTitle {
+    background-image: url(./pasta-background.jpg);
+    background-size: cover;
+}
+
 .listaMenu {
     display: flex;
     align-items: center;
@@ -35,11 +77,116 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10%;
-    padding-bottom: 40%;
+    padding-bottom: 35%;
+    padding-top: 5%;
+    border: 1px solid antiquewhite;
+    border-radius: 3%;
+    margin: 0% 10%;
 }
 
 
-h1 {
-    text-align: center;
-    padding: 5% 0%;
+body.pagMenu {
+    background: rgb(41, 37, 37);
+    color: antiquewhite;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Media query */
+
+@media screen and (max-width: 950px) {
+    .menuContainer {
+        grid-gap: 3%;
+        padding-right: 4%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .menuContainer {
+        grid-gap: 1%;
+        padding-right: 3%;
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 90px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .menuContainer {
+        grid-gap: 1%;
+        padding-right: 3%;
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 85px;
+    }
+
+    body.formulario a,
+    body.pagMenu a {
+
+        display: inline-block;
+        white-space: normal;
+        word-break: break-word;
+        font-size: 18px;
+        width: 100%;
+        max-width: 200px;
+        padding-right: 25px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menuContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 15px;
+        justify-content: center;
+        padding-right: 15%;
+    }
+
+    h1 {
+        font-size: 75px;
+    }
+
+    body.formulario a,
+    body.pagMenu a {
+
+        display: inline-block;
+        white-space: normal;
+        word-break: break-word;
+        font-size: 16px;
+        width: 100%;
+        max-width: 200px;
+        padding-right: 20px;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .menuContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        font-size: 13px;
+        justify-content: center;
+        padding-right: 25%;
+    }
+
+    h1 {
+        font-size: 65px;
+    }
+
+    body.formulario a,
+    body.pagMenu a {
+
+        display: inline-block;
+        white-space: normal;
+        word-break: break-word;
+        font-size: 14px;
+        width: 100%;
+        max-width: 200px;
+        padding-right: 15px;
+        text-align: center;
+    }
 }

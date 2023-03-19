@@ -1,0 +1,21 @@
+{{> head }}
+<body class="formulario">
+{{> header }}
+
+<form action="modif" method="post">
+    <select name="nombre" class="selectplato">
+        <option value="plato">Plato</option>
+        {{#each menu}}
+        <option value="{{ @index }}">{{ nombre }}</option>
+        {{/each}}
+    </select>
+    <div class="formBody">
+        <label for="precio">Precio</label>
+        <input type="text" name="precio">
+    </div>
+    <button type="submit">Modificar</button>
+</form>
+
+{{> footer }}
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>

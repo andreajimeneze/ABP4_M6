@@ -1,18 +1,40 @@
 {{> head }}
-{{> header }}
 
-<h1>Menú</h1>
-<div class="menuContainer">
+{{#if exito}}
+  <div class="mensaje-exito">{{exito}}</div>
+{{/if}}
 
-{{#each menu}}
-    <div class="listaMenu">
-    <h4>{{ this.nombre }}</h4>
-    <p>...................</p>
-    <h5>{{ this.precio }}
-    </h5>
-</div>
-{{/each}}
+<body class="pagMenu">
+    {{> header }}
 
-</div>
+    <div class="headTitle">
+        <h1>Menú</h1>
+    </div>
+    <div class="menuContainer">
 
-{{> footer }}
+        {{#each menu}}
+        <div class="listaMenu">
+            <h4>{{ nombre }}</h4>
+            <p class="puntos">...................</p>
+            <h5>{{ precio }}
+            </h5>
+        </div>
+        {{/each}}
+
+    </div>
+<style>
+  .puntos {
+    display: inline-block;
+  }
+</style>
+
+<script>
+  const nombres = document.querySelectorAll('.listaMenu h4');
+  nombres.forEach(nombre => {
+    const puntos = nombre.nextElementSibling;
+    const puntosLength = Math.max(0, 30 - nombre.textContent.length); // 30 es la longitud máxima de los puntos
+    puntos.textContent = ".".repeat(puntosLength);
+  });
+</script>
+
+    {{> footer }}
