@@ -23,6 +23,8 @@ app.use(express.static("public"))
 app.use(express.static("data"))
 app.use(morgan("dev"))
 hbs.registerPartials(__dirname + "/views/partials")
+app.use("/node_modules", express.static(__dirname + "/node_modules"));
+
 
 app.listen(3000, () => {
   console.log("En puerto 3000")
@@ -61,25 +63,6 @@ app.get("/add", (req, res) => {
   res.render("formAdd")
 })
 
-app.get("/delete", (req, res) => {
-  res.render("formDelete")
-})
-
-app.post("/delete/", (req, res) => {
-  let index = data.findIndex(menu => menu.nombre === helpers.capFirstMay(req.body.nombre))
-
-  if (index < 0 || index >= data.length) {
-    res.status(404).send("Plato no encontrado")
-  } else {
-    data.splice(index, 1)
-
-    fs.writeFileSync("./data/db.json", JSON.stringify(data))
-    res.status(200).send("Plato eliminado correctamente")
-
-  }
-})
-
-
 app.get("/modif", (req, res) => {
   let menu = data.map((menuItem) => {
     return {
@@ -97,5 +80,26 @@ app.post("/modif", (req, res) => {
   data[menuName].precio = newPrice;
 
   fs.writeFileSync("./data/db.json", JSON.stringify(data))
-  res.status(200).send("Precio actualizado correctamente");
+  res.redirect("/")
 });
+
+
+app.post("/delete/", (req, res) => {
+  let index = data.findIndex(menu => menu.nombre === helpers.capFirstMay(req.body.nombre))
+
+  if (index < 0 || index >= data.length) {
+    res.status(404).send("Plato no encontrado")
+  } else {
+    data.splice(index, 1)
+
+    fs.writeFileSync("./data/db.json", JSON.stringify(data))
+    res.status(200).send("Plato eliminado correctamente")
+
+  }
+});
+
+app.get("/delete", (req, res) => {
+  res.render("formDelete")
+})
+
+

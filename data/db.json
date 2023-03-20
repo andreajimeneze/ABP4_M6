@@ -1,18 +1,1 @@
-[
-    {
-        "nombre": "Fetuccini",
-        "precio": 4590
-    },
-    {
-        "nombre": "Pastel de choclo",
-        "precio": 4990
-    },
-    {
-        "nombre": "Caldo de cabeza",
-        "precio": 5
-    },
-    {
-        "nombre": "cazuela",
-        "precio": 5990
-    }
-]
+[{"nombre":"Fetuccini","precio":4590},{"nombre":"Pastel de choclo","precio":4990},{"nombre":"Caldo de cabeza","precio":3990},{"nombre":"Milanesa con agregado","precio":6990},{"nombre":"Fideos con salsa","precio":4500},{"nombre":"Empanada de pino","precio":2500}]
